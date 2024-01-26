@@ -59,21 +59,12 @@ a hershey-character structure."
   (loop for i from 0 below (- (length list) 1)
         collect (list (nth i list) (nth (1+ i) list))))
 
-;; the file hershey contains descriptions of characters which form the hershey font.
-;;read the file and parse it as a list of strings
-(defun read-hershey-file (filename)
-  (with-open-file (stream filename)
-    (loop for line = (read-line stream nil)
-          while line
-          collect line)))
-
 (defun hershey-init ()
   (let ((file-name (asdf:system-relative-pathname :cl-sdl2-hershey "src/hershey-glyphs.txt")))
     (setq *hershey-characters*
-          (loop for s in (read-hershey-file file-name)
+          (loop for s in (uiop:read-file-lines file-name)
                 collect (let ((c (hershey-character-parse-string s)))
                           (cons (hershey-character-letter-number c)  c))))))
-
 
 
 (defun transform-letter (char-or-string)
