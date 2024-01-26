@@ -34,7 +34,7 @@ jobs:
           curl -L https://raw.githubusercontent.com/roswell/roswell/master/scripts/install-for-ci.sh | sh
           echo "$HOME/.roswell/bin" >> $GITHUB_PATH
       - name: Install qlot
-        run: ros install qlot
+        run: ros install fukamachi/qlot
       - name: Install dependencies with qlot
         run: qlot install
       - name: Install rove
