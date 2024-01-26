@@ -36,12 +36,11 @@ jobs:
       - name: Install qlot
         run: ros install qlot
       - name: Install dependencies with qlot
-        run: qlot install
+        run: qlot update
       - name: Install rove
         run: ros install fukamachi/rove
       - name: Run tests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          PATH="~/.roswell/bin:$PATH"
           rove cl-sdl2-hershey.asd
