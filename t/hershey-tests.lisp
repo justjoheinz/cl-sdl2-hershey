@@ -7,4 +7,4 @@
 (deftest test-1 ()
   (ok (= 1 1)))
 
-(run-suite *package*)
+;; (run-suite *package*)
