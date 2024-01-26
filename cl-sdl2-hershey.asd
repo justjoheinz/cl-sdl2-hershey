@@ -5,15 +5,15 @@
                 :components((:file "package")
                             (:file "fonts")
                             (:file "hershey")
-                            (:static-file "hershey-glyphs.txt"))
-                :in-order-to ((test-op (test-op :cl-sdl2-hershey/tests))))))
+                            (:static-file "hershey-glyphs.txt"))))
+  :in-order-to ((test-op (test-op :cl-sdl2-hershey/tests))))
 
 (asdf:defsystem cl-sdl2-hershey/tests
   :depends-on (:cl-sdl2-hershey :rove)
   :serial t
   :components ((:module "t"
                 :components ((:file "hershey-tests"))))
-  :perform (test-op (op c) (symbol-call :rove :run c)))
+  :perform (test-op (op c) (symbol-call :rove :run c :style :spec)))
 
 (asdf:defsystem cl-sdl2-hershey/example
   :depends-on (:cl-sdl2-hershey :sdl2)
