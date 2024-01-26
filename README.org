@@ -1,5 +1,7 @@
 #+title: Readme
 
+[[https://github.com/justjoheinz/cl-sdl2-hershey/actions/workflows/ci.yaml/badge.svg]]
+
 * cl-sdl2-hershey
 
 This repository adds the capability to use Hershey vector fonts with cl-sdl2.
