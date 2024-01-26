@@ -12,7 +12,8 @@
   :depends-on (:cl-sdl2-hershey :rove)
   :serial t
   :components ((:module "t"
-                :components ((:file "hershey-tests")))))
+                :components ((:file "hershey-tests"))))
+  :perform (test-op (op c) (symbol-call :rove :run c)))
 
 (asdf:defsystem cl-sdl2-hershey/example
   :depends-on (:cl-sdl2-hershey :sdl2)

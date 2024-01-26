@@ -32,10 +32,12 @@ jobs:
           ROSWELL_INSTALL_DIR: /usr
         run: |
           curl -L https://raw.githubusercontent.com/roswell/roswell/master/scripts/install-for-ci.sh | sh
-      - name: Install Ultralisp
-        run: ros -e '(ql-dist:install-dist "http://dist.ultralisp.org/" :prompt nil)'
-      - name: Install Rove
-        run: ros install rove
+      - name: Install qlot
+        run: ros install qlot
+      - name: Install dependencies with qlot
+        run: qlot install
+      - name: Install rove
+        run: ros install fukamachi/rove
       - name: Run tests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
