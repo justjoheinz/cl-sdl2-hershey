@@ -11,8 +11,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        lisp: [sbcl-bin]
-        os: [ubuntu-latest, macOS-latest]
+        lisp: [sbcl-bin/2.4.0]
+        os: [ubuntu-latest]
       fail-fast: false
 
     steps:
@@ -36,7 +36,7 @@ jobs:
       - name: Install qlot
         run: ros install qlot
       - name: Install dependencies with qlot
-        run: qlot update
+        run: qlot install
       - name: Install rove
         run: ros install fukamachi/rove
       - name: Run tests
