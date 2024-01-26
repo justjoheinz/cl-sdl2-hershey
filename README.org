@@ -13,6 +13,8 @@ ros install qlot # if it is not installed yet
 qlot install
 #+end_src
 
+The library is neither on ultralisp nor quicklisp, so you will need to checkout the repository.
+
 * Usage
 
 The API is still subject to change. Currently minimalistic string printing without safety net is supported. See the example for code.
