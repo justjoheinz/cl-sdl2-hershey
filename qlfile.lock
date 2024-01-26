@@ -1,0 +1,16 @@
+("quicklisp" .
+ (:class qlot/source/dist:source-dist
+  :initargs (:distribution "https://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
+  :version "2023-10-21"))
+("cl-sdl2" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "ellisvelo/cl-sdl2" :ref nil :branch nil :tag nil)
+  :version "github-f7df0baad93e57c31fdfc7098dcc26de14dedfd2"))
+("rove" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "fukamachi/rove" :ref nil :branch nil :tag nil)
+  :version "github-b9a76a495498087afe77b32412273a2b0f487bc6"))
+("assoc-utils" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "fukamachi/assoc-utils" :ref nil :branch nil :tag nil)
+  :version "github-483a22ef42995f84fac00d11fb27ace671480153"))
