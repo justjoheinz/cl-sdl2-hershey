@@ -12,8 +12,9 @@
 Hershey glyph coordinates are specified relative to this value.")
 
 
-(defmacro with-font (font &body body)
-  `(let ((*default-font* ,font))
+(defmacro with-font (font scale &body body)
+  `(let ((*default-font* ,font)
+         (*scale* ,scale))
      ,@body))
 
 (defstruct hershey-character
@@ -85,14 +86,14 @@ This is used during parsing of the hershey glyph string as well during drawing o
   "Draw a single character using the given renderer."
   (declare (type hershey-character char))
 
-  (incf *offset-x* (- (hershey-character-left-pos char)))
+  (incf *offset-x* (- (* *scale* (hershey-character-left-pos char))))
   (loop for p in (hershey-character-instructions char)
         do (let ((fst (first p))
                  (snd (second p)))
              (if (or (pen-up-p fst) (pen-up-p snd))
                  nil
                  (trans renderer (second fst) (third fst) (second snd) (third snd)))))
-  (incf *offset-x* (* (hershey-character-right-pos char) 1)))
+  (incf *offset-x* (* (hershey-character-right-pos char) *scale*)))
 
 (defun get-hershey-character (c)
   "get the hershey character for a given letter c in the default font.
@@ -115,8 +116,8 @@ It can be overriden using WITH-FONT."
                ))))
 
 (defun trans (renderer x1 y1 x2 y2)
-  (let ((x1_r (round (* *scale* (+ x1 *offset-x*))))
-        (y1_r (round (* *scale* (+ y1 *offset-y*))))
-        (x2_r (round (* *scale* (+ x2 *offset-x*))))
-        (y2_r (round (* *scale* (+ y2 *offset-y*)))))
+  (let ((x1_r (round (+ (* *scale* x1) *offset-x*)))
+        (y1_r (round (+ (* *scale* y1) *offset-y*)))
+        (x2_r (round (+ (* *scale* x2) *offset-x*)))
+        (y2_r (round (+ (* *scale* y2) *offset-y*))))
     (sdl2:render-draw-line renderer x1_r y1_r x2_r y2_r)))
