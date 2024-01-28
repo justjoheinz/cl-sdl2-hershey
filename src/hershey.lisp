@@ -13,6 +13,7 @@ Hershey glyph coordinates are specified relative to this value.")
 
 
 (defmacro with-font (font scale &body body)
+  (declare (type number scale))
   `(let ((*default-font* ,font)
          (*scale* ,scale))
      ,@body))
@@ -33,6 +34,7 @@ Hershey glyph coordinates are specified relative to this value.")
 (defun hershey-character-parse-string (string)
   "parse a string which defines a glyph/character and convert it into
 a hershey-character structure."
+  (declare (type string string))
   (let* ((letter-number (parse-integer string :start 0 :end 5))
          (number-of-vertices (parse-integer string :start 5 :end 8))
          (left-pos (transform-letter (subseq string  8  9)))
@@ -87,7 +89,6 @@ This is used during parsing of the hershey glyph string as well during drawing o
   (declare (type hershey-character char))
 
   (incf *offset-x* (- (* *scale* (hershey-character-left-pos char))))
-  (format t "offset-x: ~a~%" *offset-x*)
   (loop for p in (hershey-character-instructions char)
         do (let ((fst (first p))
                  (snd (second p)))

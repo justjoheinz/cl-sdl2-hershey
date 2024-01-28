@@ -49,9 +49,6 @@
                    (render-hershey-string renderer 100 720 "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
                    (render-hershey-string renderer 100 760 "abcdefghijklmnopqrstuvwxyz")
                    (render-hershey-string renderer 100 800 "0123456789"))
-
-
-
                  (sdl2:render-present renderer)
                  (sdl2:delay 80))
           (:quit () t))))))
