@@ -87,6 +87,7 @@ This is used during parsing of the hershey glyph string as well during drawing o
   (declare (type hershey-character char))
 
   (incf *offset-x* (- (* *scale* (hershey-character-left-pos char))))
+  (format t "offset-x: ~a~%" *offset-x*)
   (loop for p in (hershey-character-instructions char)
         do (let ((fst (first p))
                  (snd (second p)))
