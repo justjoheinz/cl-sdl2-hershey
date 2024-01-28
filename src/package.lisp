@@ -19,5 +19,4 @@
    #:*roman-duplex-font*
    #:*roman-complex-font*
    #:*roman-complex-small-font*
-   #:with-font
-   #:*scale*))
+   #:with-font))
