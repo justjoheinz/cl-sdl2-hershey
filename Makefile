@@ -1,5 +1,5 @@
 
-LISP=ros run --
+LISP=qlot exec ros run --
 
 .PHONY: help all clean example
 
