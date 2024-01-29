@@ -12,7 +12,7 @@
 Hershey glyph coordinates are specified relative to this value.")
 
 
-(defmacro with-font (font scale &body body)
+(defmacro with-font ((font scale) &body body)
   (declare (type number scale))
   `(let ((*default-font* ,font)
          (*scale* ,scale))
