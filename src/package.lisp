@@ -24,4 +24,8 @@
    #:*script-complex-font*
    #:*gothic-english-triplex-font*
    #:*gothic-german-triplex-font*
-   #:*gothic-italian-triplex-font*))
+   #:*gothic-italian-triplex-font*
+   #:*greek-complex-font*
+   #:*greek-complex-small-font*
+   #:*greek-plain-font*
+   #:*greek-simplex-font*))
