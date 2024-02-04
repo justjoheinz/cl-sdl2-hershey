@@ -21,4 +21,7 @@
    #:*roman-complex-small-font*
    #:with-font
    #:*script-simplex-font*
-   #:*script-complex-font*))
+   #:*script-complex-font*
+   #:*gothic-english-triplex-font*
+   #:*gothic-german-triplex-font*
+   #:*gothic-italian-triplex-font*))
