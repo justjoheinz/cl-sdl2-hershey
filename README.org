@@ -30,7 +30,14 @@ The API is still subject to change. Currently minimalistic string printing witho
 (cl-sdl2-hershey/example:main)
 #+end_src
 
-The example currently executes fine within emacs, but not from the command line. That is probably due to thread issues and my Mac M1.
+
+or
+
+#+begin_src shell
+make example
+#+end_src
+
+from the command line.
 
 * Origin
 
