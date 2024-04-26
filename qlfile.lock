@@ -5,11 +5,11 @@
 ("ultralisp" .
  (:class qlot/source/dist:source-dist
   :initargs (:distribution "https://dist.ultralisp.org/" :%version :latest)
-  :version "20240303180000"))
+  :version "20240424174502"))
 ("cl-sdl2" .
  (:class qlot/source/github:source-github
   :initargs (:repos "ellisvelo/cl-sdl2" :ref nil :branch nil :tag nil)
-  :version "github-b048187bf4563720f2c58a7cb7fb87d99e169b98"))
+  :version "github-fe8a1638dcadae3ea1e5627897cad3aa99f95635"))
 ("rove" .
  (:class qlot/source/github:source-github
   :initargs (:repos "fukamachi/rove" :ref nil :branch nil :tag nil)
