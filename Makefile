@@ -1,5 +1,5 @@
 
-LISP=qlot exec ros run --
+LISP=qlot exec ros run -- --dynamic-space-size 2048
 
 .PHONY: help all clean qlot-update example docs
 
