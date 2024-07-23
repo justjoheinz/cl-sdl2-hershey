@@ -10,11 +10,11 @@
  (:class qlot/source/github:source-github
   :initargs (:repos "ellisvelo/cl-sdl2" :ref nil :branch nil :tag nil)
   :version "github-fe8a1638dcadae3ea1e5627897cad3aa99f95635"))
-("rove" .
- (:class qlot/source/github:source-github
-  :initargs (:repos "fukamachi/rove" :ref nil :branch nil :tag nil)
-  :version "github-cacea7331c10fe9d8398d104b2dfd579bf7ea353"))
 ("assoc-utils" .
  (:class qlot/source/github:source-github
   :initargs (:repos "fukamachi/assoc-utils" :ref nil :branch nil :tag nil)
   :version "github-54cecfe37d29e8fe958d589706238e9792ec535f"))
+("parachute" .
+ (:class qlot/source/github:source-github
+  :initargs (:repos "Shinmera/parachute" :ref nil :branch nil :tag nil)
+  :version "github-3c04273cc61b353d7f1a087f9ae144f6f3fe4121"))

@@ -1,10 +1,13 @@
 (uiop:define-package cl-sdl2-hershey/tests
-  (:use :cl :rove)
+  (:use :cl :parachute)
   (:import-from :cl-sdl2-hershey))
 
 (in-package :cl-sdl2-hershey/tests)
 
-(deftest test-1 ()
-  (ok (= 1 1)))
+(define-test test-1 ()
+  (true (= 1 0)))
+
+(define-test test-2 ()
+  (true (= 1 1)))
 
 ;; (run-suite *package*)

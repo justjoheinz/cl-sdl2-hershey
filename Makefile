@@ -17,6 +17,13 @@ all: 			## Compile all artifacts and execute tests
 clean: ## Recursively delete fasl file
 	find ./ -name "*.fasl" -delete
 
+test: 			## Execute tests
+	$(LISP) \
+		--disable-debugger \
+		--eval '(ql:quickload :cl-sdl2-hershey/tests)' \
+		--eval '(defvar cl-user::*exit-on-test-failures* t)' \
+		--eval '(uiop:quit (if (asdf:test-system :cl-sdl2-hershey/tests) 0 1 ))'
+
 docs:  $(shell find src -name "*.lisp")  ## generate the documentation
 	$(LISP) \
 		--eval "(ql:quickload '(:coo :cl-sdl2-hershey))" \
