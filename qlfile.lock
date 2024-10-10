@@ -5,7 +5,7 @@
 ("ultralisp" .
  (:class qlot/source/dist:source-dist
   :initargs (:distribution "https://dist.ultralisp.org/" :%version :latest)
-  :version "20240917102500"))
+  :version "20241010101500"))
 ("cl-sdl2" .
  (:class qlot/source/github:source-github
   :initargs (:repos "ellisvelo/cl-sdl2" :ref nil :branch nil :tag nil)
@@ -13,7 +13,7 @@
 ("assoc-utils" .
  (:class qlot/source/github:source-github
   :initargs (:repos "fukamachi/assoc-utils" :ref nil :branch nil :tag nil)
-  :version "github-54cecfe37d29e8fe958d589706238e9792ec535f"))
+  :version "github-b14ab685231ebd924fc84ffd6099b2819ebcb7c7"))
 ("parachute" .
  (:class qlot/source/github:source-github
   :initargs (:repos "Shinmera/parachute" :ref nil :branch nil :tag nil)
