@@ -12,7 +12,7 @@ all: 			## Compile all artifacts and execute tests
 		--eval '(ql:quickload :cl-sdl2-hershey)' \
 		--eval '(ql:quickload :cl-sdl2-hershey/example)' \
 		--eval '(ql:quickload :cl-sdl2-hershey/tests)' \
-		--eval '(uiop:quit (if (rove:run "cl-sdl2-hershey/tests") 0 1))'
+		--eval '(uiop:quit (if (asdf:test-system :cl-sdl2-hershey/tests) 0 1))'
 
 clean: ## Recursively delete fasl file
 	find ./ -name "*.fasl" -delete

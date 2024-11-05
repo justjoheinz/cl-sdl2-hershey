@@ -1,11 +1,11 @@
 ("quicklisp" .
  (:class qlot/source/dist:source-dist
   :initargs (:distribution "https://beta.quicklisp.org/dist/quicklisp.txt" :%version :latest)
-  :version "2023-10-21"))
+  :version "2024-10-12"))
 ("ultralisp" .
  (:class qlot/source/dist:source-dist
   :initargs (:distribution "https://dist.ultralisp.org/" :%version :latest)
-  :version "20241010101500"))
+  :version "20241105163000"))
 ("cl-sdl2" .
  (:class qlot/source/github:source-github
   :initargs (:repos "ellisvelo/cl-sdl2" :ref nil :branch nil :tag nil)
@@ -17,4 +17,4 @@
 ("parachute" .
  (:class qlot/source/github:source-github
   :initargs (:repos "Shinmera/parachute" :ref nil :branch nil :tag nil)
-  :version "github-3c04273cc61b353d7f1a087f9ae144f6f3fe4121"))
+  :version "github-bf5131b04c69a9a6ca77bccf34bebce1f375b382"))
